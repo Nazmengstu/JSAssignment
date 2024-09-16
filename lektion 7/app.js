@@ -1,5 +1,11 @@
-let firstname="Ben";
-    let height=172;
-let nettWorth=-94635273637763
-let isAlive= true
-const person={firstname:"Ting",latsnime:"Ben"}
+const birthYear=2016;
+const currentyear=2024;
+const age=currentyear-birthYear;
+
+let isChild =age>=0 && age<=10;
+let isTeenager=age>11 && age<17;
+let isAdult=age>=18
+console.log(age, "age");
+console.log(isChild, );
+console.log(isTeenager);
+console.log(isAdult);
