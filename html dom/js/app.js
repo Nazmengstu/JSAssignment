@@ -1,4 +1,4 @@
-
+console.log("Hello World!");
 const textField = document.getElementById("text0");
 textField.innerHTML =multiplyByselfe(99)
 textField.style.fontSize = "30px"
