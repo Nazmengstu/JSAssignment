@@ -16,9 +16,6 @@ buttonText.innerHTML =multiplyByselfe(88)
 
 
 
-
-
-// öva funktioner ,
 function multiplyByselfe(nummer,) {
   return nummer*nummer;
 

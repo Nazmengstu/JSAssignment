@@ -18,11 +18,11 @@ function Namn(firstNamn,lastNamn){
 console.log(Namn( " Ben" , " Ting"));
 
 //
-function rondomNumber(max){
+function getRandomint(max){
     return Math.floor(Math.random() * 6);
 
 }
-console.log(rondomNumber());
+console.log(getRandomint(5));
 
 //
 function convertnumbertsToletters(number){
