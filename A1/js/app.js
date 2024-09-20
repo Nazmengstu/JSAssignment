@@ -1,38 +1,47 @@
-//Document Elements
-// variable texstField0, looks for "text"
-const textField0= document.getElementById("text0");
+//Variables
+//Buttons
 
-// Buttons
-const increaseScoreButton=document.getElementById("button0");
-// Internal Variable
-let score =0;
+let button0=document.getElementById("button0");
 
+let playerRollText=document.getElementById("playerRollText");
+let AiRollText=document.getElementById("AiRollText");
+let Evoluation=document.getElementById("result");
+let playerScoreText=document.getElementById("playerScoreText");
+let AiScoreText=document.getElementById("AiScoreText");
 
+// text
 
-// Process ( what is going to happen in what sequence?
-increaseScoreButton.addEventListener("click", () => {
-  increaseScoreByOne();
-  updateScoreText();
-  checkScoreForSeven();
+// Data
+let playerRoll=0;
+let AiRoll=0;
+let playerScore=0;
+let AiScore=0;
 
+// processes
+button0.addEventListener("click",()=>{
+  getRandomNumberOneToSixForPlayer();
+  showPlayerRollResult();
+  getRandomNumberOneToSixForAi();
+  showAiRollResult();
 });
 
-// Controllers section
-function increaseScoreByOne() {
-  score++;
-
+// controllers
+function getRandomNumberOneToSixForPlayer(){
+  playerRoll =Math.floor(Math.random()* 6) + 1;
+}
+function getRandomNumberOneToSixForAi(){
+  AiRoll =Math.floor(Math.random() * 6) + 1;
 }
 
-function checkScoreForSeven() {
-  if (score>=7){
-changScoreTextColorToGreen();
-  }
+
+
+// Views
+function showPlayerRollResult(){
+  playerRollText.innerHTML=playerRoll;
 }
 
-// View
-function updateScoreText() {
-  textField0.innerHTML = "your score is : " + score;
+function showAiRollResult(){
+  AiRollText.innerHTML=AiRoll;
 }
- function changScoreTextColorToGreen() {
-  textField0.style.color = "green";
- }
+
+
