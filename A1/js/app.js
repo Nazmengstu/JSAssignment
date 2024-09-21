@@ -5,7 +5,7 @@ let button0=document.getElementById("button0");
 
 let playerRollText=document.getElementById("playerRollText");
 let AiRollText=document.getElementById("AiRollText");
-let Evoluation=document.getElementById("result");
+let Evaluation=document.getElementById("result");
 let playerScoreText=document.getElementById("playerScoreText");
 let AiScoreText=document.getElementById("AiScoreText");
 
@@ -23,6 +23,8 @@ button0.addEventListener("click",()=>{
   showPlayerRollResult();
   getRandomNumberOneToSixForAi();
   showAiRollResult();
+  evaluateRoll();
+ updateScores();
 });
 
 // controllers
@@ -33,6 +35,18 @@ function getRandomNumberOneToSixForAi(){
   AiRoll =Math.floor(Math.random() * 6) + 1;
 }
 
+function evaluateRoll(){
+  if(playerRoll > AiRoll){
+    Evaluation.innerHTML= "you Win!";
+    playerScore++;
+  } else if(playerRoll < AiRoll){
+    Evaluation.innerHTML= "Ai Win!";
+    AiScore++;
+  } else{
+    Evaluation.innerHTML= "It´s a Draw!!";
+  }
+
+}
 
 
 // Views
@@ -43,5 +57,8 @@ function showPlayerRollResult(){
 function showAiRollResult(){
   AiRollText.innerHTML=AiRoll;
 }
-
+function updateScores(){
+  playerScoreText.innerHTML= playerScore;
+  AiScoreText.innerHTML= AiScore;
+}
 
