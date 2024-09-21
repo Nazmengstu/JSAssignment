@@ -2,10 +2,9 @@
 //Buttons
 
 let button0=document.getElementById("button0");
-
 let playerRollText=document.getElementById("playerRollText");
 let AiRollText=document.getElementById("AiRollText");
-let Evaluation=document.getElementById("result");
+let Evaluation=document.getElementById("Evaluation");
 let playerScoreText=document.getElementById("playerScoreText");
 let AiScoreText=document.getElementById("AiScoreText");
 
