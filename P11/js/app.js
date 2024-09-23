@@ -33,6 +33,14 @@ console.log(Math.pow(4,24));
 //console.log(`${numberOfbottles} green bottles hangning on the well, and if one green bottle should accidentlly fall, there will be ${--numberOfbottles} green bottles hanging on the wall.`);
 
 
-for (let i = 12; i >= 0; i--) {
+for (let i = 10; i >= 0; i--) {
   console.log("There is " + i + " green bottles hanging on the well." + i + "green bottles hanging on the well" + " and if one green bottle should accidently fall there will be");
 }
+// Array
+let studentNames=["Olivia"," Ethan", " Isabela", "Rebca", "Nazret", "Natta", "Aida", " Sofi"]
+console.log( "We have " + studentNames.length + "students");
+studentNames.push("ben");
+for (let i = 0; i< studentNames.length;  i++) {
+  console.log("Good morning" + " " +studentNames[i]);
+}
+
