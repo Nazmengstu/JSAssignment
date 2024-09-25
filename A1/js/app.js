@@ -9,7 +9,7 @@ let playerRollText=document.getElementById("playerRollText");
 let AiRollText=document.getElementById("AiRollText");
 // text
 
-// Data
+
 let playerRoll=0;
 let AiRoll=0;
 let playerScore=0;
